@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+</head>
+<body>
+<h1>LOG IN HERE</h1>
+<div class="form">
+    <form class="forms" action="lgin" method="post">
+            {% csrf_token %}
+        <input class="formGroup" type="text" name="username" placeholder="enter user name"><br>
+        <input class="formGroup" type="password" name="password" placeholder="enter your password"><br>
+        <input class="formGroup" type="submit">
+    </form>
+        {% for msg in messages %}
+        <h4>{{msg}}</h4>
+        {% endfor %}
+</div>
+<style>
+
+    body {
+
+      background-image:url('https://cdn.statusqueen.com/desktopwallpaper/thumbnail/teddy-bear-Hd_4k_desktop_wallpaper_photos-545.jpg');
+      background-position:center;
+      background-size:cover;
+      height:100vh;
+      }
+          .forms {
+    text-type:center;
+    text-align:center;
+    font-size:33px;
+    margin-top:190px;
+    background-color: rgba(41, 39, 39, 0.3);
+    box-shadow: 0 5px 30px black;
+    }
+.formGroup{
+  border: none;
+  width: 80%;
+  border-bottom: 2px solid white;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: transparent;
+  color: white;
+
+}
+
+    h1 {
+    text-align: center;
+    color:white;
+
+</style>
+</body>
+</html>
